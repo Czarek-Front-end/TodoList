@@ -11,7 +11,6 @@ html {
     font-size: 62.5%;
 }
 
-
 input {
     font-family: 'Noto Sans';
 }
@@ -31,37 +30,43 @@ body {
     background: #fff;
     box-shadow: 0 0 100px rgba(0,0,0, .09);
     text-align: center;
-    
+    padding-bottom: 2.1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
     .todo{
         width: 80%;
     }
 }
 
-
 .todoList li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
+    background-color: #FAFAFA;
+    margin: 1.3rem 0;
     padding-left: 20px;
     height: 40px;
     text-align: left;
     list-style: none;
-    box-shadow: 1px 0 15px rgb(0,0,0, .1);
     font-size: 12px;
 }
+
 .todoInput {
     width: 83%;
     height: 4rem;
     padding-left: 1.6rem;
     border: 1px solid rgb(0,0,0, .07);
     font-size: 1.4rem;
-
 }
 
+.todoInput::placeholder {
+    opacity: .4;
+}
+
+.todoList h3 {
+    font-size: 2.2rem;
+}
 
 .header {
     margin: 4rem 0;
@@ -76,8 +81,12 @@ body {
 
 .heading h1{
     font-family: 'Roboto Slab', 'sans-serif';
-    font-size: 2rem;
+    font-size: 2.6rem;
     color: #ffff;
+}
+
+.alertInfo {
+    font-size: 1rem;
 }
 
 .addBtn {
@@ -91,4 +100,23 @@ body {
 
 .todo-body {
     padding: 0 32px;
+}
+
+.tools {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.popup {
+    display: none;
+}
+
+.tools button {
+    height: 100%;
+    width: 4rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
