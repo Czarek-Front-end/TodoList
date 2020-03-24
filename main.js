@@ -39,6 +39,7 @@ const prepareDOMEvents = () => {
     $ulList.addEventListener('click', checkClick);
     $closeTodoBtn.addEventListener('click', closePopup);
     $addPopupBtn.addEventListener('click', changeTodo);
+    $todoInput.addEventListener('keyup', enterClickCheck)
 };
 
 
@@ -54,6 +55,13 @@ const addNewTask = () => {
         createToolsArea();
     } else {
         $alertInfo.innerText = 'Wpisz treść zadania';
+    }
+}
+
+
+const enterClickCheck = () => {
+    if (event.keyCode === 13) {
+        addNewTask();
     }
 }
 
@@ -111,10 +119,12 @@ const closePopup = () => {
 const deleteTask = (e) => {
     const deleteTodo = e.target.closest('li')
     deleteTodo.remove();
-    
+    $popup.style.display = 'none'
+
     if ($allTasks.length === 0) {
         $alertInfo.innerText = 'Twoja lista jest pusta';
     }
+
 }
 
 document.addEventListener('DOMContentLoaded', main);
