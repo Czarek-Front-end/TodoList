@@ -111,7 +111,7 @@ const closePopup = () => {
 const deleteTask = (e) => {
     const deleteTodo = e.target.closest('li')
     deleteTodo.remove();
-
+    
     if ($allTasks.length === 0) {
         $alertInfo.innerText = 'Twoja lista jest pusta';
     }
